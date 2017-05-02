@@ -1,9 +1,19 @@
 package edu.projet;
 
-public enum EtatReservation {
-		
-	ANNULEE("Annul�e"), CONFIRMEE("Confirm�e");
+/**
+ * Etat de la réservation. Peut prendre deux valeurs
+ * - annulee
+ * - confirmee
+ * 
+ * @author Seme
+ */
+public enum EtatReservation
+{
+    ANNULEE("annulee"), CONFIRMEE("confirmee");
 
+    /**
+     * Label du type énuméré
+     */
     private final String label;
 
     private EtatReservation(String label)
@@ -15,4 +25,24 @@ public enum EtatReservation {
     {
         return label;
     }
+
+    /**
+     * Permet d'utiliser les labels correspondants aux valeurs constantes
+     * 
+     * @param name
+     *            Le label à trouver
+     * @return La constante correspondante au label
+     */
+    public static EtatReservation permissiveValueOf(String name)
+    {
+        for (EtatReservation e : values())
+        {
+            if (e.getLabel().equals(name))
+            {
+                return e;
+            }
+        }
+        return null;
+    }
+
 }

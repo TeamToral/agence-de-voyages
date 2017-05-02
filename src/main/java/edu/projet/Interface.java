@@ -6,6 +6,6 @@ public interface Interface<T, PK>
 {
 	public List<T> findAll();
 
-	public T findById (Long id);
+	public T findById (int id);
 }
 

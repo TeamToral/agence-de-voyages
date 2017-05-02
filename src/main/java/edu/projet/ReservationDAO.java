@@ -11,7 +11,7 @@ public interface ReservationDAO extends Interface<Reservation,Integer>{
 
 		
 	@Override
-	public Reservation findById (Long id);
+	public Reservation findById (int id);
 	
 	
 	
