@@ -1,20 +1,22 @@
 package edu.projet;
 
-public class Adresse {
-	
+public class Adresse
+{
+
 	private int idAdd;
 	private String adresse;
 	private String codePostal;
 	private String ville;
 	private String pays;
-	
+
 	public Adresse()
 	{
-		
+
 	}
-	
-	public Adresse(String adresse, String codePostal, String ville, String pays) {
-		
+
+	public Adresse(String adresse, String codePostal, String ville, String pays)
+	{
+
 		this.adresse = adresse;
 		this.codePostal = codePostal;
 		this.ville = ville;
@@ -30,44 +32,57 @@ public class Adresse {
 	}
 
 	/**
-	 * @param idAdd the idAdd to set
+	 * @param idAdd
+	 *            the idAdd to set
 	 */
 	public void setIdAdd(int idAdd)
 	{
 		this.idAdd = idAdd;
 	}
 
-	public String getAdresse() {
+	public String getAdresse()
+	{
 		return adresse;
 	}
 
-	public void setAdresse(String adresse) {
+	public void setAdresse(String adresse)
+	{
 		this.adresse = adresse;
 	}
 
-	public String getCodePostal() {
+	public String getCodePostal()
+	{
 		return codePostal;
 	}
 
-	public void setCodePostal(String codePostal) {
+	public void setCodePostal(String codePostal)
+	{
 		this.codePostal = codePostal;
 	}
 
-	public String getVille() {
+	public String getVille()
+	{
 		return ville;
 	}
 
-	public void setVille(String ville) {
+	public void setVille(String ville)
+	{
 		this.ville = ville;
 	}
 
-	public String getPays() {
+	public String getPays()
+	{
 		return pays;
 	}
 
-	public void setPays(String pays) {
+	public void setPays(String pays)
+	{
 		this.pays = pays;
 	}
-	
 
+	public String toString()
+	{
+		return "Adresse [adresse=" + adresse + ", codePostal=" + codePostal + ", ville=" + ville + ", pays=" + pays
+				+ "]";
+	}
 }

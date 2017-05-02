@@ -36,14 +36,16 @@ public class PassagerDAOSql implements PassagerDAO
 			{
 				// chaque ligne du tableau peut etre exploitée, on va recuperer
 				// chaque valeur de chaque colonne
-
+				AdresseDAOSql ads = new AdresseDAOSql();
 				Passager passager = new Passager();
 				// appel des mutateurs
 				passager.setIdPas(resultSet.getInt("idPassager"));
 				;
 				passager.setNom(resultSet.getString("nom"));
 				passager.setPrenom(resultSet.getString("prenom"));
-
+				
+				Adresse a = ads.findById(resultSet.getInt("idAdd"));
+				passager.setAdresse(a);
 				// on ajoute l'objet adresse à la liste de passagers
 				listePassager.add(passager);
 			}
@@ -102,7 +104,7 @@ public class PassagerDAOSql implements PassagerDAO
 					Adresse adresse = adresseDao.findById(resultSet.getInt("idAdd"));
 					passager.setAdresse(adresse);
 					// on retourne le passager associé au param
-					return passager;
+					
 				}
 			}
 

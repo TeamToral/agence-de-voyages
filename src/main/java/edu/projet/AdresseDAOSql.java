@@ -53,6 +53,7 @@ public class AdresseDAOSql implements AdresseDAO
 				adresse.setCodePostal(resultset.getString("codePostal"));
 				adresse.setVille(resultset.getString("ville"));
 				adresse.setPays(resultset.getString("pays"));
+				adresses.add(adresse);
 			}
 
 			/*
@@ -110,8 +111,7 @@ public class AdresseDAOSql implements AdresseDAO
 					adresse.setCodePostal(resultSet.getString("codePostal"));
 					adresse.setVille(resultSet.getString("ville"));
 					adresse.setPays(resultSet.getString("pays"));
-					// on retourne l'adresse correspondante à l'id en param
-					return adresse;
+					
 				}
 			}
 

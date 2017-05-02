@@ -33,7 +33,7 @@ public class reservationDAOSql implements ReservationDAO
 			/*
 			 * Etape 3: Execution de la requète SQL
 			 */
-			ResultSet resultset = statement.executeQuery("SELECT * FROM adresse");
+			ResultSet resultset = statement.executeQuery("SELECT * FROM reservation");
 			/*
 			 * Etape 4: Parcours des résultats
 			 */
@@ -100,7 +100,7 @@ public class reservationDAOSql implements ReservationDAO
 			/*
 			 * Etape 3: Execution de la requète SQL
 			 */
-			ResultSet resultset = statement.executeQuery("SELECT * FROM adresse");
+			ResultSet resultset = statement.executeQuery("SELECT * FROM reservation");
 			/*
 			 * Etape 4: Parcours des résultats
 			 */
@@ -165,7 +165,7 @@ public class reservationDAOSql implements ReservationDAO
 			/*
 			 * Etape 3: Execution de la requète SQL
 			 */
-			ResultSet resultset = statement.executeQuery("SELECT * FROM adresse");
+			ResultSet resultset = statement.executeQuery("SELECT * FROM reservation");
 			/*
 			 * Etape 4: Parcours des résultats
 			 */
