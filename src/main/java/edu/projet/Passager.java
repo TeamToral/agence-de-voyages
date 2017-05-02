@@ -5,9 +5,9 @@ import java.io.File;
 public class Passager
 {
 
-	public int id;
-	public String nom;
-	public String prenom;
+	private int id;
+	private String nom;
+	private String prenom;
 	private Adresse adresse;
 
 	public static int nbPassager = 0;

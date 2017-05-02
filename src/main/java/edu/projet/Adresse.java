@@ -2,10 +2,16 @@ package edu.projet;
 
 public class Adresse {
 	
-	public String adresse;
-	public String codePostal;
-	public String ville;
-	public String pays;
+	private int idAdd;
+	private String adresse;
+	private String codePostal;
+	private String ville;
+	private String pays;
+	
+	public Adresse()
+	{
+		
+	}
 	
 	public Adresse(String adresse, String codePostal, String ville, String pays) {
 		
@@ -13,6 +19,22 @@ public class Adresse {
 		this.codePostal = codePostal;
 		this.ville = ville;
 		this.pays = pays;
+	}
+
+	/**
+	 * @return the idAdd
+	 */
+	public int getIdAdd()
+	{
+		return idAdd;
+	}
+
+	/**
+	 * @param idAdd the idAdd to set
+	 */
+	public void setIdAdd(int idAdd)
+	{
+		this.idAdd = idAdd;
 	}
 
 	public String getAdresse() {
