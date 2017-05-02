@@ -26,7 +26,8 @@ public class AdresseDAOSql implements AdresseDAO
 			/*
 			 * Etape 1: se connecter à la BDD
 			 */
-			Connection connexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/agence", "user", "passs");
+			Connection connexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/agence", "user",
+					"password");
 			/*
 			 * Etape 2: Création du statement
 			 */
