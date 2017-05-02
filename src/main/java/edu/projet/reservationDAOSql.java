@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class reservationDAOSql implements ReservationDAO
@@ -190,10 +192,18 @@ public class reservationDAOSql implements ReservationDAO
 
 					temp = resultset.getString("dateReservation");
 					String[] tempDate = temp.split("-");
-					@SuppressWarnings("deprecation")
-					Date d = new Date(Integer.parseInt(tempDate[0]), Integer.parseInt(tempDate[1]),
-							Integer.parseInt(tempDate[2]));
-					reservation.setDate(d);
+					//@SuppressWarnings("deprecation")
+					//Date d = new Date(Integer.parseInt(tempDate[0]), Integer.parseInt(tempDate[1]),
+							//Integer.parseInt(tempDate[2]));
+					try
+					{
+						reservation.setDate(new SimpleDateFormat("yyyy-MM-dd").parse(t));
+					} catch (ParseException e)
+					{
+						System.err.println("erreur conversion de date");
+						e.printStackTrace();
+					}
+					//reservation.setDate(d);
 
 					reservations.add(reservation);
 				}
